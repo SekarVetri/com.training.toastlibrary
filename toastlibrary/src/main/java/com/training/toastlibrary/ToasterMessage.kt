@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 
-public class ToasterMessage {
+object ToasterMessage {
     public fun show(context: Context, message: String?) {
         var inflater: LayoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
