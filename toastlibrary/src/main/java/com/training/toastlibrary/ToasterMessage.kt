@@ -11,7 +11,7 @@ import android.widget.Toast
 
 
 object ToasterMessage {
-    public fun show(context: Context, message: String?) {
+    public fun show(context: Context, message: String? = "Custom Library!") {
         var inflater: LayoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -21,7 +21,7 @@ object ToasterMessage {
         )
 
         val text = layout.findViewById<View>(R.id.text) as TextView
-        text.text = "Custom Library!"
+        text.text = message
 
         val toast = Toast(context)
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
